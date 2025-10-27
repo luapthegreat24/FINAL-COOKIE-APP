@@ -1,0 +1,15 @@
+# Render Deployment Configuration
+# Create a new Web Service on Render and use these settings:
+
+# Build Command:
+npm install
+
+# Start Command:
+node stripe-server.js
+
+# Environment Variables (Add these in Render dashboard):
+STRIPE_SECRET_KEY=your_stripe_secret_key_here
+FRONTEND_URL=https://your-frontend-app.netlify.app
+PORT=4242
+
+# Auto-Deploy: Yes (connect your GitHub repo)

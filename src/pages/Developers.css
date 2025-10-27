@@ -1,0 +1,516 @@
+/* Developers Page - Matching Home Design */
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Permanent+Marker&family=Comic+Neue:wght@400;700&display=swap");
+
+ion-content {
+  --background: #fff9f0;
+}
+
+/* Hero Section */
+.dev-hero {
+  position: relative;
+  background: linear-gradient(135deg, #fff9f0 0%, #ffe4c4 100%);
+  padding: 120px 60px 80px;
+  overflow: hidden;
+  border-bottom: 5px solid #3d2817;
+}
+
+.sketch-bg-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 35px,
+      rgba(61, 40, 23, 0.03) 35px,
+      rgba(61, 40, 23, 0.03) 70px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 35px,
+      rgba(61, 40, 23, 0.03) 35px,
+      rgba(61, 40, 23, 0.03) 70px
+    );
+  pointer-events: none;
+}
+
+.dev-hero-content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #d2691e;
+  color: #fff;
+  font-family: "Patrick Hand", cursive;
+  font-size: 16px;
+  border: 3px solid #3d2817;
+  border-radius: 50px;
+  transform: rotate(-3deg);
+  margin-bottom: 30px;
+  box-shadow: 4px 4px 0 rgba(61, 40, 23, 0.3);
+}
+
+.dev-hero-title {
+  font-family: "Permanent Marker", cursive;
+  font-size: 64px;
+  color: #3d2817;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 5px 5px 0 rgba(210, 105, 30, 0.3);
+}
+
+.dev-hero-title span {
+  display: block;
+}
+
+.word-1 {
+  transform: rotate(-2deg);
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+.word-2 {
+  transform: rotate(2deg);
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.dev-hero-subtitle {
+  font-family: "Patrick Hand", cursive;
+  font-size: 24px;
+  color: #8b4513;
+  transform: rotate(-1deg);
+}
+
+/* Team Section */
+.team-section {
+  padding: 80px 60px;
+  background: #fff9f0;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.team-intro-title {
+  font-family: "Permanent Marker", cursive;
+  font-size: 48px;
+  color: #3d2817;
+  margin-bottom: 20px;
+  transform: rotate(-2deg);
+  text-shadow: 4px 4px 0 rgba(210, 105, 30, 0.2);
+}
+
+.team-intro-text {
+  font-family: "Comic Neue", cursive;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #8b4513;
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.team-card {
+  position: relative;
+  background: #fff;
+  border: 4px solid #3d2817;
+  border-radius: 30px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s;
+  box-shadow: 10px 10px 0 rgba(61, 40, 23, 0.2);
+}
+
+.team-card.rotate-left {
+  transform: rotate(-1deg);
+}
+
+.team-card.rotate-right {
+  transform: rotate(1deg);
+}
+
+.team-card:hover {
+  transform: rotate(0deg) translateY(-10px);
+  box-shadow: 15px 15px 0 rgba(61, 40, 23, 0.3);
+}
+
+/* Card Corners */
+.card-corner {
+  display: none;
+}
+
+.card-sketch-border {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 3px dashed rgba(61, 40, 23, 0.4);
+  border-radius: 30px;
+  pointer-events: none;
+}
+
+/* Developer Info */
+.dev-avatar {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: bounce 3s ease-in-out infinite;
+}
+
+.dev-avatar img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 4px solid #3d2817;
+  box-shadow: 4px 4px 0 rgba(61, 40, 23, 0.3);
+}
+
+.dev-name {
+  font-family: "Permanent Marker", cursive;
+  font-size: 26px;
+  color: #3d2817;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 0 rgba(210, 105, 30, 0.2);
+}
+
+.dev-role {
+  font-family: "Patrick Hand", cursive;
+  font-size: 18px;
+  color: #d2691e;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.dev-bio {
+  font-family: "Comic Neue", cursive;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #8b4513;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+/* Skills */
+.dev-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.skill-badge {
+  display: inline-block;
+  padding: 6px 15px;
+  background: #fff9f0;
+  border: 2px solid #3d2817;
+  border-radius: 20px;
+  font-family: "Comic Neue", cursive;
+  font-size: 14px;
+  color: #3d2817;
+  font-weight: bold;
+  transform: rotate(-2deg);
+  transition: all 0.3s;
+}
+
+.skill-badge:hover {
+  background: #d2691e;
+  color: #fff;
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* Social Links */
+.dev-social {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: #fff9f0;
+  border: 3px solid #3d2817;
+  border-radius: 50%;
+  color: #3d2817;
+  font-size: 22px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.social-link:hover {
+  background: #d2691e;
+  color: #fff;
+  transform: rotate(360deg) scale(1.1);
+  box-shadow: 4px 4px 0 rgba(61, 40, 23, 0.3);
+}
+
+/* Card Doodles */
+.card-doodles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.doodle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(210, 105, 30, 0.3);
+  border-radius: 50%;
+}
+
+.doodle.d1 {
+  top: 10%;
+  right: 10%;
+  width: 25px;
+  height: 25px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.doodle.d2 {
+  bottom: 15%;
+  left: 8%;
+  width: 20px;
+  height: 20px;
+  animation: float 5s ease-in-out infinite 1s;
+}
+
+/* Join Section */
+.join-section {
+  position: relative;
+  background: linear-gradient(135deg, #d2691e 0%, #ff6347 100%);
+  padding: 80px 60px;
+  text-align: center;
+  border-top: 5px solid #3d2817;
+  overflow: hidden;
+}
+
+.join-content {
+  position: relative;
+  z-index: 2;
+}
+
+.join-title {
+  font-family: "Permanent Marker", cursive;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 4px 4px 0 rgba(61, 40, 23, 0.4);
+  transform: rotate(-2deg);
+}
+
+.join-subtitle {
+  font-family: "Patrick Hand", cursive;
+  font-size: 24px;
+  color: #fff9f0;
+  margin-bottom: 30px;
+  transform: rotate(1deg);
+}
+
+.join-btn {
+  padding: 18px 50px;
+  font-family: "Permanent Marker", cursive;
+  font-size: 20px;
+  color: #3d2817;
+  background: #fff;
+  border: 4px solid #3d2817;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 8px 8px 0 rgba(61, 40, 23, 0.4);
+  transform: rotate(-1deg);
+}
+
+.join-btn:hover {
+  background: #fff9f0;
+  transform: rotate(-1deg) translate(-4px, -4px);
+  box-shadow: 12px 12px 0 rgba(61, 40, 23, 0.5);
+}
+
+/* Floating Cookies */
+.cookie-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.floating-cookie {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #d2691e 30%, #8b4513 100%);
+  border-radius: 50%;
+  border: 4px solid rgba(61, 40, 23, 0.3);
+  opacity: 0.6;
+}
+
+.floating-cookie::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #3d2817;
+  border-radius: 50%;
+  top: 20%;
+  left: 25%;
+}
+
+.floating-cookie::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #3d2817;
+  border-radius: 50%;
+  bottom: 30%;
+  right: 20%;
+}
+
+.floating-cookie.c1 {
+  top: 10%;
+  left: 10%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-cookie.c2 {
+  top: 20%;
+  right: 15%;
+  animation: float 7s ease-in-out infinite 1s;
+}
+
+.floating-cookie.c3 {
+  bottom: 15%;
+  left: 20%;
+  animation: float 8s ease-in-out infinite 2s;
+}
+
+.floating-cookie.c4 {
+  bottom: 25%;
+  right: 10%;
+  animation: float 9s ease-in-out infinite 3s;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dev-hero {
+    padding: 80px 30px 60px;
+  }
+
+  .dev-hero-title {
+    font-size: 42px;
+  }
+
+  .dev-hero-subtitle {
+    font-size: 18px;
+  }
+
+  .team-section {
+    padding: 60px 30px;
+  }
+
+  .team-intro-title {
+    font-size: 36px;
+  }
+
+  .team-intro-text {
+    font-size: 16px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .team-card {
+    padding: 30px 20px;
+  }
+
+  .dev-name {
+    font-size: 22px;
+  }
+
+  .dev-avatar {
+    font-size: 60px;
+  }
+
+  .join-section {
+    padding: 60px 30px;
+  }
+
+  .join-title {
+    font-size: 36px;
+  }
+
+  .join-subtitle {
+    font-size: 18px;
+  }
+
+  .floating-cookie {
+    width: 60px;
+    height: 60px;
+  }
+}

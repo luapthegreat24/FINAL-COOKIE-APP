@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "name": "chip-happens-stripe-server",
+  "builds": [
+    {
+      "src": "stripe-server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "stripe-server.js"
+    }
+  ],
+  "env": {
+    "STRIPE_SECRET_KEY": "@stripe-secret-key",
+    "FRONTEND_URL": "@frontend-url"
+  }
+}
